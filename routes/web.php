@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\BooksController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\BooksController;
 
 
 Route::get('/', function () {
@@ -25,4 +26,7 @@ Route::post('/books/trashed/{id}/delete', [BooksController::class, 'trashedDestr
 # Books Panel Frontend (Rabbi)
 Route::get('/books', [BooksController::class, 'index'])->name('books.index');
 Route::get('/books/{id}', [BooksController::class, 'show'])->name('books.show');
-// Route::get('/books', [BooksController::class, 'search'])->name('books.search');
+
+# User register/login/logout
+Route::get('/register', [UserController::class, 'create']);
+Route::post('/users', [UserController::class, 'store']);

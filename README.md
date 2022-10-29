@@ -9,3 +9,5 @@
  - [x] On Delete book moved to Trash
  - [x] From Trash book can be Restored and Permanently Deleted
  - [x] Pagination
+ - [x] Search Books
+ - [x] User Can Register
