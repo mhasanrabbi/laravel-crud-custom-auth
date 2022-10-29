@@ -10,7 +10,13 @@
             <i class="fas fa-align-justify"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="nav navbar-nav mr-auto">
+            <ul class="nav navbar-nav mr-auto ml-2">
+                <li class="nav-item">
+                    <a class="nav-link btn btn-sm btn-info text-white">
+                        {{auth()->user()->name}}
+                        <i class="fas fa-user"></i>
+                    </a>
+                </li>
                 <li class="nav-item {{ request()->routeIs('books.index') ? 'active' : ''}}">
                     <a class="nav-link" href="{{route('books.index')}}">Books</a>
                 </li>

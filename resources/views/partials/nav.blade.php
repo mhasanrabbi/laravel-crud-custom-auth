@@ -12,15 +12,21 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="nav navbar-nav ml-auto">
+                        @auth
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-sm btn-info text-white">
+                                {{auth()->user()->name}}
+                                <i class="fas fa-user"></i>
+                            </a>
+                        </li>
+                        @else
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Log In</a>
+                            <a class="nav-link" href="/login">Log In</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Register</a>
+                            <a class="nav-link" href="/register">Register</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">User Profile</a>
-                        </li>
+                        @endauth
                     </ul>
                 </div>
             </div>
