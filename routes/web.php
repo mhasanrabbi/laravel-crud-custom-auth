@@ -28,5 +28,10 @@ Route::get('/books', [BooksController::class, 'index'])->name('books.index');
 Route::get('/books/{id}', [BooksController::class, 'show'])->name('books.show');
 
 # User register/login/logout
+
+// Show Register/Create Form
 Route::get('/register', [UserController::class, 'create']);
+// Create/Register User
 Route::post('/users', [UserController::class, 'store']);
+// Logout User
+Route::post('/logout', [UserController::class, 'logout']);
