@@ -25,7 +25,7 @@
             <div class="col">
                 <h2>Login</h2>
                 <div class="jumbotron">
-                    <form action="/users/login" method="POST">
+                    <form action="/users/authenticate" method="POST">
                         @csrf
                         <div class="form-group">
                             <label for="exampleInputEmail1">Email address</label>
@@ -43,6 +43,10 @@
                                     <p class="text-danger mt-2">{{$message}}</p>
                                 @enderror
                         </div>
+                        <div class="form-group mb-3">
+                            <label for="remember">Remember me</label>
+                            <input type="checkbox" name="remember" value="1">
+                      </div>
                         <button type="submit" class="btn btn-primary">Login</button>
                         <a href="/register">
                             <p  class="text">Don't Have an account? <span class="text-primary">Register</span></p></a>
