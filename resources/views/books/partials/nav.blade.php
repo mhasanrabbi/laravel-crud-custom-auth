@@ -13,7 +13,7 @@
             <ul class="nav navbar-nav mr-auto ml-2">
                 <li class="nav-item">
                     <a class="nav-link btn btn-sm btn-info text-white">
-                        {{auth()->user()->name}}
+                        {{-- {{auth()->user()->name}} --}}
                         <i class="fas fa-user"></i>
                     </a>
                 </li>

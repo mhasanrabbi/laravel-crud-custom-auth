@@ -30,14 +30,16 @@ Route::get('/books/{id}', [BooksController::class, 'show'])->name('books.show');
 # User register/login/logout
 
 // Show Register/Create Form
-Route::get('/register', [UserController::class, 'create']);
+Route::get('/register', [UserController::class, 'create'])->middleware('guest');
+
 // Create/Register User
 Route::post('/users', [UserController::class, 'store']);
+
 // Logout User
 Route::post('/logout', [UserController::class, 'logout']);
 
 // Show Login Form
-Route::get('/login', [UserController::class, 'login']);
+Route::get('/login', [UserController::class, 'login'])->name('login')->middleware('guest');
 
 // User Login
 Route::post('/users/authenticate', [UserController::class, 'authenticate']);

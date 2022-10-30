@@ -44,13 +44,10 @@
             <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">User</a>
             <ul class="collapse list-unstyled" id="pageSubmenu">
                 <li>
-                    <a href="#">Log In</a>
+                    <a href="/login">Log In</a>
                 </li>
                 <li>
-                    <a href="#">Register</a>
-                </li>
-                <li>
-                    <a href="#">User Profile</a>
+                    <a href="/register">Register</a>
                 </li>
             </ul>
         </li>
